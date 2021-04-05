@@ -12,32 +12,30 @@
       href="https://fonts.googleapis.com/css2?family=Mulish&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Trafalgar</title>
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__container">
-        <section class="header__menu">
-          <div class="header__menu--title">
-            <img
-              class="header__title--logo"
-              src="../src/img/logo.png"
-              alt="logo"
-            />
-          </div>
 
-          <nav class="header__navigation">
-            <h5 class="header__item"><a href="#">Home</a></h5>
-            <h5 class="header__item"><a href="#">Find a doctor</a></h5>
-            <h5 class="header__item"><a href="#">Apps</a></h5>
-            <h5 class="header__item"><a href="#">Testimonials</a></h5>
-            <h5 class="header__item"><a href="#">About us</a></h5>
-          </nav>
-        </section>
-      </div>
-      <!-- .header-->
+    <header class="header">
+      <img class="header__title--logo" src="../src/img/logo.png" alt="logo" />
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu">
+        <li><a href="#work">Home</a></li>
+        <li><a href="#about">Find a doctor</a></li>
+        <li><a href="#careers">Apps</a></li>
+        <li><a href="#contact">Testimonials</a></li>
+        <li><a href="#contact">About us</a></li>
+      </ul>
     </header>
+
     <main>
       <section class="consult">
         <div class="consult__leftside">
@@ -153,7 +151,7 @@
             access information instantaneously (no tedeous form, long calls, or
             administrative hassle) and securely
           </p>
-          <button class="btn downloads__leftside__btn">Download</button>
+          <button class="btn downloads__leftside__btn">Download &#8595;</button>
         </div>
         <div class="downloads__rightside">
           <img
