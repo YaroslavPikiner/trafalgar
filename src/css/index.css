@@ -55,8 +55,8 @@ body {
   padding: 20px 20px;
   border-right: 1px solid transparent;
   text-decoration: none;
-  color: #1F1534;
-  transition: all .2s;
+  color: #1f1534;
+  transition: all 0.2s;
 }
 
 .header li a:hover,
@@ -152,8 +152,6 @@ body {
   height: 41px;
 }
 
-
-
 .consult {
   display: flex;
   justify-content: space-evenly;
@@ -171,7 +169,7 @@ body {
   font-size: 48px;
   line-height: 56px;
   margin-bottom: 25px;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .consult__leftside__title:hover {
@@ -185,7 +183,7 @@ body {
 .consult__leftside__btn {
   background-color: #458ff6;
   color: #fff;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 .consult__leftside__btn:hover {
   transform: scale(1.1);
@@ -282,6 +280,14 @@ body {
   color: #7d7987;
 }
 
+.advantages__item {
+  background: #ffffff;
+  /* drop shadow */
+
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+  border-radius: 20px;
+}
+
 .services__btn {
   color: #458ff6;
   margin-bottom: 220px;
@@ -323,8 +329,8 @@ body {
 
 .provides__rightside__btn {
   background-color: transparent;
-  color: #458FF6;
-  transition: all .2s;
+  color: #458ff6;
+  transition: all 0.2s;
 }
 
 .provides__rightside__btn:hover {
@@ -362,8 +368,8 @@ body {
 
 .downloads__leftside__btn {
   background-color: transparent;
-  color: #458FF6;
-  transition: all .2s;
+  color: #458ff6;
+  transition: all 0.2s;
 }
 
 .downloads__leftside__btn:hover {
@@ -585,6 +591,5 @@ body {
 
   .services__advantages {
     grid-template-columns: 1fr 1fr 1fr;
-  
   }
 }
