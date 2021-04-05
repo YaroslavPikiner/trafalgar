@@ -278,14 +278,14 @@ body {
   font-size: 16px;
   line-height: 28px;
   color: #7d7987;
+  width: auto;
 }
 
 .advantages__item {
   background: #ffffff;
-  /* drop shadow */
-
   box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
   border-radius: 20px;
+  padding: 40px;
 }
 
 .services__btn {
