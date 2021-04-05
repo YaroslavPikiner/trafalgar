@@ -505,11 +505,13 @@ body {
 .latest__view__all:hover {
   border-color: #000;
   color: rgb(0, 0, 0);
+  cursor: pointer;
 }
 
 .footer__container {
   display: flex;
   justify-content: center;
+  flex-direction: row;
   flex-wrap: wrap;
   padding: 100px 0;
   background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%);
@@ -520,11 +522,11 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 50%;
 }
 
 .license {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
@@ -544,11 +546,11 @@ body {
 }
 
 .license__subtitle {
-  width: 50%;
   margin-bottom: 31px;
   font-weight: 300;
   font-size: 18px;
   line-height: 28px;
+  width: 50%;
 }
 
 .license__rigths {
