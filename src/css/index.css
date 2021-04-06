@@ -87,7 +87,7 @@ body {
   height: 2px;
   background: #000000;
   border-radius: 5px;
-  margin: 15px 0 25px 0;
+  margin: 20px auto;
 }
 /* menu icon */
 
@@ -303,6 +303,7 @@ body {
 .services__btn {
   color: #458ff6;
   transition: all 0.2s;
+  background-color: transparent;
 }
 
 .services__btn:hover {
@@ -384,6 +385,7 @@ body {
   background-color: transparent;
   color: #458ff6;
   transition: all 0.2s;
+  margin-bottom: 20px;
 }
 
 .downloads__leftside__btn:hover {
@@ -468,6 +470,9 @@ body {
   border-top-left-radius: 20px; /* Левый верхний уголок */
   border-top-right-radius: 20px; /* Правый верхний уголок */
   margin-bottom: 21px;
+}
+
+.latest__item {
   box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
 }
 
@@ -551,14 +556,18 @@ body {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+  padding: auto;
 }
 
 .license__title > span {
   border: 1px solid #fff;
   background-color: #fff;
+  width: 60px;
+  height: 60px;
   padding: 5px;
   border-radius: 30px;
   color: #5b9bf3;
+  text-align: center;
 }
 
 .license__subtitle {
@@ -625,6 +634,10 @@ body {
 }
 
 @media (max-width: 36em) {
+  body {
+    text-align: center;
+  }
+
   .header {
     padding: 20px 10px 24px 10px;
   }
@@ -658,6 +671,11 @@ body {
     margin-bottom: 100px;
   }
 
+  .downloads__rightside__img {
+    width: 327px;
+    height: 248px;
+  }
+
   .latest {
     margin-bottom: 0;
   }
@@ -666,8 +684,12 @@ body {
     font-size: 32px;
   }
 
+  .consult__leftside__btn {
+    margin-bottom: 20px;
+  }
+
   img {
-    width: 343px;
+    width: 297px;
     height: 248px;
   }
 
@@ -726,6 +748,10 @@ body {
     margin-bottom: 20px;
     transition: all 0.2s;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .advantages__item:hover {
@@ -749,7 +775,9 @@ body {
   }
 
   .footer__menu {
-    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     overflow-x: hidden;
   }
@@ -772,7 +800,6 @@ body {
 }
 
 @media (max-width: 321px) {
-
   body {
     text-align: center;
   }
@@ -836,7 +863,6 @@ body {
     font-size: 14px;
   }
 
-
   .provides {
     margin-bottom: 30px;
   }
@@ -859,7 +885,7 @@ body {
 
   .reviews__title {
     font-size: 22px;
-    margin: 20px 0 0 0 ;
+    margin: 20px 0 0 0;
   }
 
   .rewiews__line {
