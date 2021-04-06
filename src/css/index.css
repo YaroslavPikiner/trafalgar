@@ -222,6 +222,7 @@ body {
   grid-template-rows: 1fr 1fr;
   justify-content: center;
   grid-gap: 2vw;
+  margin-bottom: 50px;
 }
 
 .advantages__subtitle {
