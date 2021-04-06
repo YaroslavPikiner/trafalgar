@@ -203,7 +203,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 290px;
+  margin-bottom: 200px;
 }
 
 .services__title {
@@ -218,10 +218,11 @@ body {
 
 .services__advantages {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 186px);
+  grid-template-columns: repeat(auto-fill, 255px);
+  glid-auto-flow: column;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
-  grid-gap: 2vw;
+  grid-gap: 1.5vw;
   margin-bottom: 50px;
 }
 
@@ -311,7 +312,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 230px;
+  margin-bottom: 200px;
 }
 
 .provides__leftside {
@@ -393,7 +394,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   color: #fff;
-  margin-bottom: 284px;
+  margin-bottom: 180px;
 }
 
 .rewiews__wrap {
@@ -406,7 +407,15 @@ body {
 
 .reviews__title {
   text-align: center;
-  margin: 34px 0 100px 0;
+  margin: 34px 0 0 0;
+}
+
+.rewiews__line {
+  width: 56px;
+  height: 2px;
+  background: #fff;
+  border-radius: 5px;
+  margin: 20px auto;
 }
 
 .reviews__user {
@@ -494,6 +503,7 @@ body {
   background-color: transparent;
   transition: all 0.2s;
   margin: 10px;
+  outline: none;
 }
 
 .latest__btn:hover {
@@ -653,7 +663,7 @@ body {
   }
 
   .consult__leftside__title {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   img {
@@ -753,5 +763,10 @@ body {
 
   .menu__list > li {
     display: none;
+  }
+
+  .subtitle__small {
+    font-size: 14px;
+    line-height: 20px;
   }
 }
