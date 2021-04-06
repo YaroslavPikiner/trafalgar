@@ -56,13 +56,15 @@ body {
   border-right: 1px solid transparent;
   text-decoration: none;
   color: #1f1534;
-  transition: all 0.2s;
+  transition: all 0.5s;
 }
 
 .header li a:hover,
 .header .menu-btn:hover {
   background-color: transparent;
-  color: #fff;
+  font-weight: bold;
+  color: #000;
+  transform: scale(1.1);
 }
 
 .header .logo {
@@ -219,7 +221,7 @@ body {
 .services__advantages {
   display: grid;
   grid-template-columns: repeat(auto-fill, 255px);
-  glid-auto-flow: column;
+  grid-auto-flow: row;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
   grid-gap: 1.5vw;
@@ -415,7 +417,7 @@ body {
   height: 2px;
   background: #fff;
   border-radius: 5px;
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
 .reviews__user {
@@ -459,10 +461,6 @@ body {
 
 .latest__line {
   margin: 40px auto;
-}
-
-.latest__title {
-  margin-bottom: 100px;
 }
 
 .latest__item > img {
