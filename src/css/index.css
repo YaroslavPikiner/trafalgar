@@ -111,7 +111,7 @@ body {
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
   background: #333;
-  content: '';
+  content: "";
   display: block;
   height: 100%;
   position: absolute;
@@ -528,7 +528,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .license {
@@ -642,7 +641,7 @@ body {
   }
 
   .reviews {
-    margin-bottom: 100px;
+    margin-bottom: 20px;
   }
 
   .downloads {
@@ -671,13 +670,22 @@ body {
     width: 300px;
   }
 
+  .latest__title {
+    margin-bottom: 20px;
+  }
+
+  .latest__item {
+    margin-bottom: 20px;
+  }
+
   .rewiews__wrap {
     width: auto;
   }
 
   .reviews__title {
     font-size: 28px;
-    margin: 34px 0 50px 0;
+    margin: 34px 0 40px 0;
+    line-height: 24px;
   }
 
   .user__rewiew {
@@ -686,9 +694,18 @@ body {
     line-height: 15px;
   }
 
+  .reviews__user {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .user__logo {
     width: 150px;
     height: 150px;
+  }
+
+  .user__info {
+    margin-bottom: 20px;
   }
 
   .advantages__title {
@@ -698,6 +715,7 @@ body {
   .advantages__item {
     margin-bottom: 20px;
     transition: all 0.2s;
+    padding: 20px;
   }
 
   .advantages__item:hover {
@@ -721,13 +739,19 @@ body {
   }
 
   .footer__menu {
-    flex-direction: column;
-    align-items: center;
-    margin-left: 15%;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-x: hidden;
   }
 
   .menu__item {
-    width: 25%;
+    width: auto;
     text-align: center;
+    font-size: 12px;
+    margin: 0 26.5px;
+  }
+
+  .menu__list > li {
+    display: none;
   }
 }
