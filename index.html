@@ -29,10 +29,10 @@
       ></label>
       <ul class="menu">
         <li><a href="#work">Home</a></li>
-        <li><a href="#about">Find a doctor</a></li>
-        <li><a href="#careers">Apps</a></li>
-        <li><a href="#contact">Testimonials</a></li>
-        <li><a href="#contact">About us</a></li>
+        <li><a href="#doctor">Find a doctor</a></li>
+        <li><a href="#app">Apps</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#about">About us</a></li>
       </ul>
     </header>
 
@@ -57,7 +57,7 @@
         </div>
       </section>
 
-      <section class="services">
+      <section class="services" id="doctor">
         <h2 class="title services__title">Our services</h2>
         <div class="line"></div>
         <p class="subtitle__small services__subtitle">
@@ -120,7 +120,7 @@
         <button class="btn services__btn">Learn More</button>
       </section>
 
-      <section class="provides">
+      <section class="provides" id="about">
         <div class="provides__leftside">
           <img
             src="./src/img/trafalgar-illustration sec02 1.png"
@@ -143,7 +143,7 @@
         </div>
       </section>
 
-      <section class="downloads">
+      <section class="downloads" id="app">
         <div class="downloads__leftside">
           <h1 class="title downloads__leftside__title">
             Download our mobile apps
@@ -165,7 +165,7 @@
         </div>
       </section>
 
-      <section class="reviews">
+      <section class="reviews" id="testimonials">
         <div class="rewiews__wrap">
           <div class="reviews__block">
             <h2 class="title reviews__title">What our customer are saying</h2>
@@ -190,11 +190,13 @@
       </section>
 
       <section class="latest">
-        <h2 class="title latest__title">Check out our latest article</h2>
-        <div class="line"></div>
+        <div>
+          <h2 class="title latest__title">Check out our latest article</h2>
+          <div class="line latest__line"></div>
+        </div>
         <div class="latest__items">
           <div class="latest__item">
-            <img src="./src/img/image 2.png" alt="latest1" />
+            <img class="latest__img" src="./src/img/image 2.png" alt="latest1" />
             <h4 class="latest__item--title">
               Disease detection, check up in the laboratory
             </h4>
@@ -206,7 +208,7 @@
           </div>
 
           <div class="latest__item">
-            <img src="./src/img/image 2 (1).png" alt="latest2" />
+            <img class="latest__img" src="./src/img/image 2 (1).png" alt="latest2" />
             <h4 class="latest__item--title">
               Disease detection, check up in the laboratory
             </h4>
@@ -218,7 +220,7 @@
           </div>
 
           <div class="latest__item">
-            <img src="./src/img/image 3.png" alt="latest3" />
+            <img class="latest__img" src="./src/img/image 3.png" alt="latest3" />
             <h4 class="latest__item--title">
               Disease detection, check up in the laboratory
             </h4>
