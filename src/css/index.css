@@ -1,5 +1,5 @@
 body {
-  background-color: #e5e5e5;
+  background-color: #fff;
   overflow-x: hidden;
 }
 
@@ -194,6 +194,7 @@ body {
   color: #fff;
   transition: all 0.2s;
 }
+
 .consult__leftside__btn:hover {
   transform: scale(1.1);
   border-color: #000;
@@ -767,5 +768,135 @@ body {
   .subtitle__small {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+@media (max-width: 321px) {
+
+  body {
+    text-align: center;
+  }
+
+  img {
+    width: 243px;
+    height: 200px;
+  }
+
+  .line {
+    margin: 20px auto;
+  }
+
+  .header__title--logo {
+    padding: 10px;
+  }
+
+  .header .menu-icon {
+    left: 31%;
+    padding: 28px 10px;
+  }
+
+  .consult__leftside__title {
+    font-size: 22px;
+  }
+
+  .consult__leftside__subtitle {
+    font-size: 18px;
+  }
+
+  .consult__leftside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .services__title {
+    margin: 0;
+    font-size: 22px;
+  }
+
+  .services__subtitle {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .advantages__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .advantages__title {
+    font-size: 18px;
+  }
+
+  .advantages__subtitle {
+    font-size: 14px;
+  }
+
+
+  .provides {
+    margin-bottom: 30px;
+  }
+
+  .provides__rightside__title {
+    font-size: 22px;
+  }
+
+  .downloads {
+    margin-bottom: 60px;
+  }
+
+  .downloads__leftside {
+    margin-bottom: 30px;
+  }
+
+  .downloads__leftside__title {
+    font-size: 22px;
+  }
+
+  .reviews__title {
+    font-size: 22px;
+    margin: 20px 0 0 0 ;
+  }
+
+  .rewiews__line {
+    margin: 20px auto;
+  }
+
+  .user__logo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .user__firstname {
+    font-size: 18px;
+  }
+
+  .user__info {
+    font-size: 16px;
+  }
+
+  .user__rewiew {
+    width: 80%;
+  }
+
+  .latest__title {
+    font-size: 22px;
+  }
+
+  .latest__item--title {
+    font-size: 18px;
+  }
+
+  .latest__img {
+    width: 293px;
+    height: 198px;
+  }
+
+  .footer__menu {
+    flex-direction: column;
   }
 }
