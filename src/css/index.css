@@ -467,6 +467,7 @@ body {
   border-top-left-radius: 20px; /* Левый верхний уголок */
   border-top-right-radius: 20px; /* Правый верхний уголок */
   margin-bottom: 21px;
+  box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
 }
 
 .latest__items {
