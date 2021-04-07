@@ -3,6 +3,12 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 .title {
   font-size: 36px;
   line-height: 56px;
@@ -443,19 +449,21 @@ body {
   align-items: center;
   width: 40%;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 1.125em;
   line-height: 30px;
 }
 
 .user__firstname {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 1.375em;
   line-height: 48px;
 }
 
 .user__logo {
   border-radius: 50%;
   border: 5px solid #fff;
+  max-width: 100%;
+  height: auto;
 }
 
 .latest {
@@ -475,6 +483,8 @@ body {
 
 .latest__item {
   box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
+  width: 350px;
+  margin: 15px;
 }
 
 .latest__items {
@@ -490,15 +500,17 @@ body {
   font-weight: bold;
   font-size: 21px;
   line-height: 32px;
+  padding: 10px 0 10px 10px;
   margin-bottom: 15px;
 }
 
 .latest__item--subtitle {
-  width: 400px;
+  width: auto;
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
   margin-bottom: 25px;
+  padding: 10px;
   color: #7d7987;
 }
 
@@ -683,11 +695,6 @@ body {
     margin-bottom: 100px;
   }
 
-  .downloads__rightside__img {
-    width: 327px;
-    height: 248px;
-  }
-
   .latest {
     margin-bottom: 0;
   }
@@ -711,7 +718,7 @@ body {
   }
 
   .latest__item--subtitle {
-    width: 300px;
+    text-align: center;
   }
 
   .latest__title {
@@ -719,6 +726,10 @@ body {
   }
 
   .latest__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
   }
 
@@ -730,6 +741,7 @@ body {
     font-size: 28px;
     margin: 34px 0 40px 0;
     line-height: 24px;
+    padding: 10px;
   }
 
   .user__rewiew {
@@ -916,7 +928,7 @@ body {
   }
 
   .user__firstname {
-    font-size: 18px;
+    font-size: 	1.125em;
   }
 
   .user__info {
@@ -932,7 +944,8 @@ body {
   }
 
   .latest__item--title {
-    font-size: 18px;
+    font-size: 15px;
+    text-align: center;
   }
 
   .latest__img {
@@ -942,5 +955,14 @@ body {
 
   .footer__menu {
     flex-direction: column;
+  }
+}
+
+
+@media (max-width: 1020px) { 
+  .reviews__user {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
