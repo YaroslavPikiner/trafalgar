@@ -8,7 +8,6 @@ img {
   height: auto;
 }
 
-
 .title {
   font-size: 36px;
   line-height: 56px;
@@ -119,7 +118,7 @@ img {
 .header .menu-icon .navicon:before,
 .header .menu-icon .navicon:after {
   background: #333;
-  content: "";
+  content: '';
   display: block;
   height: 100%;
   position: absolute;
@@ -553,7 +552,6 @@ img {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center;
-
 }
 
 .license__title {
@@ -613,9 +611,16 @@ img {
   color: black;
 }
 
-
 .footer__container {
   flex-wrap: wrap;
+}
+
+@media (max-width: 1020px) {
+  .reviews__user {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media (min-width: 48em) {
@@ -641,10 +646,6 @@ img {
   .advantages__subtitle {
     width: 300px;
   }
-
-    
-
-
 }
 
 @media (max-width: 36em) {
@@ -652,9 +653,12 @@ img {
     text-align: center;
   }
 
-
   .header {
     padding: 20px 10px 24px 10px;
+  }
+
+  .line {
+    margin: 26px auto;
   }
 
   .consult,
@@ -696,6 +700,10 @@ img {
 
   .consult__leftside__btn {
     margin-bottom: 20px;
+  }
+
+  .downloads__leftside__title {
+    width: auto;
   }
 
   img {
@@ -919,7 +927,7 @@ img {
   }
 
   .user__firstname {
-    font-size: 	1.125em;
+    font-size: 1.125em;
   }
 
   .user__info {
@@ -946,14 +954,5 @@ img {
 
   .footer__menu {
     flex-direction: column;
-  }
-}
-
-
-@media (max-width: 1020px) { 
-  .reviews__user {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 }
