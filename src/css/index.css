@@ -35,8 +35,9 @@ img {
   border-radius: 55px;
   width: 200px;
   height: 56px;
-  border-color: #458ff6;
+  border-color: #458FF6;
   outline: none;
+  text-decoration: none;
 }
 
 .header {
@@ -555,22 +556,27 @@ img {
 }
 
 .license__title {
-  margin-bottom: 20px;
+  margin: 10px 12px;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
   padding: auto;
 }
 
-.license__title > span {
-  border: 1px solid #fff;
-  background-color: #fff;
-  width: 60px;
-  height: 60px;
-  padding: 5px;
-  border-radius: 30px;
+
+.license__logo {
+  font-size: 26px;
+  line-height: 33px;
   color: #5b9bf3;
-  text-align: center;
+  background-color: #fff;
+  padding: 7px 17px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.license__logobox {
+  display: flex;
+  align-items: center;
 }
 
 .license__subtitle {
@@ -599,6 +605,7 @@ img {
 }
 
 .menu__list > li {
+  width: 150px;
   font-weight: 300;
   font-size: 18px;
   line-height: 38px;
@@ -682,6 +689,10 @@ img {
     margin-bottom: 100px;
   }
 
+  .provides__leftside__img {
+    margin-bottom: 30px;
+  }
+
   .reviews {
     margin-bottom: 20px;
   }
@@ -699,7 +710,7 @@ img {
   }
 
   .consult__leftside__btn {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   .downloads__leftside__title {
