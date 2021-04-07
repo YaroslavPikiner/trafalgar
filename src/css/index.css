@@ -93,7 +93,7 @@ img {
   height: 2px;
   background: #000000;
   border-radius: 5px;
-  margin: 20px auto;
+  margin: 26px 0 33px 0;
 }
 /* menu icon */
 
@@ -216,10 +216,6 @@ img {
   margin-bottom: 200px;
 }
 
-.services__title {
-  margin-bottom: 33px;
-}
-
 .services__subtitle {
   width: 50%;
   text-align: center;
@@ -337,7 +333,6 @@ img {
 
 .provides__rightside__title {
   font-weight: bold;
-  font-size: 48px;
   line-height: 56px;
   margin-bottom: 25px;
 }
@@ -377,8 +372,7 @@ img {
 }
 
 .downloads__leftside__title {
-  font-weight: bold;
-  font-size: 48px;
+  width: 256px;
   line-height: 56px;
   margin-bottom: 25px;
 }
@@ -414,7 +408,7 @@ img {
   height: auto;
   background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
   border-radius: 24px;
-  padding-bottom: 60px;
+  padding-bottom: 90px;
 }
 
 .reviews__title {
@@ -423,11 +417,8 @@ img {
 }
 
 .rewiews__line {
-  width: 56px;
-  height: 2px;
   background: #fff;
-  border-radius: 5px;
-  margin: 40px auto;
+  margin: 25px auto 77px;
 }
 
 .reviews__user {
@@ -472,7 +463,7 @@ img {
 }
 
 .latest__line {
-  margin: 40px auto;
+  margin: 26px auto 72px;
 }
 
 .latest__item > img {
