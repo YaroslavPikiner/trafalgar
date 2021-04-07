@@ -729,6 +729,7 @@ img {
 
   .latest__item--subtitle {
     text-align: center;
+    line-height: 22px;
   }
 
   .latest__title {
@@ -949,6 +950,10 @@ img {
     width: 80%;
   }
 
+  .latest__items {
+    margin-bottom: 30px;
+  }
+
   .latest__title {
     font-size: 22px;
   }
@@ -961,6 +966,10 @@ img {
   .latest__img {
     width: 293px;
     height: 198px;
+  }
+
+  .latest__view__all {
+    margin-bottom: 30px;
   }
 
   .footer__menu {
