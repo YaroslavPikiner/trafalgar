@@ -216,7 +216,7 @@ img {
 }
 
 .services__subtitle {
-  width: 50%;
+  width: 38%;
   text-align: center;
   margin-bottom: 80px;
 }
@@ -399,7 +399,7 @@ img {
   justify-content: center;
   flex-wrap: wrap;
   color: #fff;
-  margin-bottom: 180px;
+  margin-bottom: 280px;
 }
 
 .rewiews__wrap {
