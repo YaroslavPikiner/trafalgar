@@ -599,6 +599,7 @@ img {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 0 50px;
 }
 
 .license {
@@ -651,10 +652,6 @@ img {
   line-height: 60px;
 }
 
-.menu__item {
-  margin-right: 100px;
-  width: 19%;
-}
 
 .menu__list > li {
   width: 150px;
