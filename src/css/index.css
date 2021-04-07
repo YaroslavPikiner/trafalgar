@@ -227,7 +227,7 @@ img {
   grid-auto-flow: row;
   grid-template-rows: 1fr 1fr;
   justify-content: center;
-  grid-gap: 1.5vw;
+  grid-gap: 34px;
   margin-bottom: 50px;
 }
 
@@ -316,7 +316,7 @@ img {
 
 .provides {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin-bottom: 200px;
 }
@@ -356,7 +356,7 @@ img {
 .downloads {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   margin-bottom: 266px;
 }
