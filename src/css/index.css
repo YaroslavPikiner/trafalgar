@@ -32,10 +32,10 @@ img {
 }
 
 .btn {
+  border: 1px solid #458FF6;
   border-radius: 55px;
   width: 200px;
   height: 56px;
-  border-color: #458FF6;
   outline: none;
   text-decoration: none;
 }
