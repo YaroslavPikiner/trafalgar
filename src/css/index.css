@@ -343,6 +343,7 @@ img {
   color: #458ff6;
   transition: all 0.2s;
   background-color: transparent;
+  margin: 0 auto;
 }
 
 .services__btn:hover {
