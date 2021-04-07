@@ -767,8 +767,6 @@ img {
     margin-bottom: 40px;
   }
 
-  
-
   .downloads__leftside__title {
     width: auto;
     text-align: left;
@@ -831,8 +829,8 @@ img {
     margin-bottom: 20px;
   }
 
-  .services__advantages {
-    grid-template-columns: 1fr;
+  .services__container {
+    margin-bottom: 0;
   }
 
   .advantages__title {
