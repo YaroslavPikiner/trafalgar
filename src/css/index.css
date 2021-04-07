@@ -237,27 +237,31 @@ img {
 
 .services {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  margin-bottom: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.services__container {
+  max-width: 1224px;
+  margin-bottom: 220px;
+}
+
+.services__title {
+  text-align: center;
 }
 
 .services__subtitle {
   max-width: 952px;
   text-align: center;
-  margin-bottom: 80px;
+  margin: auto auto 80px;
 }
 
 .services__advantages {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 255px);
-  grid-auto-flow: row;
-  grid-template-rows: 1fr 1fr;
-  justify-content: center;
-  grid-gap: 34px;
-  margin-bottom: 50px;
-  min-width: 350px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0 48px 70px 48px;
 }
 
 .advantages__title {
@@ -280,6 +284,7 @@ img {
   box-shadow: 10px 40px 50px rgba(229, 233, 246, 0.4);
   border-radius: 20px;
   padding: 20px;
+  margin-bottom: 37px;
 }
 
 .advantages__subtitle {
@@ -363,7 +368,6 @@ img {
 
 .provides__rightside {
   width: 445px;
-  margin-left: 2%;
 }
 
 .provides__rightside__title {
