@@ -14,6 +14,7 @@ const modal = `
 
 let header = document.querySelector('header');
 header.insertAdjacentHTML('beforebegin', modal);
+
 let searchButton = document.querySelector('.findBtn');
 let searchInput = document.querySelector('#modal__search');
 let nextElButton = document.querySelector('.nextBtn');
@@ -23,7 +24,11 @@ let parentElButton = document.querySelector('.downBtn');
 let clearBtn = document.querySelector('.clearBtn');
 let searchModal = document.querySelector('.modal__search');
 let span = document.getElementById('warn-message');
+
 let element;
+
+let x = 0;
+let y = 0;
 
 const findElement = function () {
 	element = document.querySelector(`${searchInput.value}`);
@@ -108,32 +113,57 @@ clearBtn.onclick = function () {
 	element.style.border = '';
 };
 
+
+
+// function Click() {
+// 	this.handlers = [];
+// }
+
+
+// Click.prototype = {
+// 	findElement: function() {
+
+// 	}
+// }
+
+
+
 // // DRAG N DROP
-searchModal.onmousedown = function (event) {
-	let shiftX = event.clientX - searchModal.getBoundingClientRect().left;
-	let shiftY = event.clientY - searchModal.getBoundingClientRect().top;
-	searchModal.style.background = '#63B8F2';
-	searchModal.style.cursor = 'pointer';
 
-	moveAt(event.pageX, event.pageY);
-	function moveAt(pageX, pageY) {
-		searchModal.style.left = pageX - shiftX + 'px';
-		searchModal.style.top = pageY - shiftY + 'px';
-	}
+const mouseDownHandler = function(e) {
+    // Get the current mouse position
+    x = e.clientX;
+    y = e.clientY;
 
-	const onMouseMove = function (event) {
-		moveAt(event.pageX, event.pageY);
-	};
-
-	document.addEventListener('mousemove', onMouseMove);
-
-	searchModal.onmouseup = function () {
-		document.removeEventListener('mousemove', onMouseMove);
-		searchModal.onmouseup = null;
-		searchModal.style.background = '';
-	};
+    // Attach the listeners to document
+    document.addEventListener('mousemove', mouseMoveHandler);
+    document.addEventListener('mouseup', mouseUpHandler);
 };
 
-searchModal.ondragstart = function () {
-	return false;
+const mouseMoveHandler = function(e) {
+    // How far the mouse has been movesearchModal
+    searchModal.style.zIndex = 100;
+    const dx = e.clientX - x;
+    const dy = e.clientY - y;
+
+    // Set the position of element
+    searchModal.style.top = `${searchModal.offsetTop + dy}px`;
+    searchModal.style.left = `${searchModal.offsetLeft + dx}px`;
+
+    // Reassign the position of mouse
+    x = e.clientX;
+    y = e.clientY;
 };
+
+const mouseUpHandler = function() {
+    // Remove the handlers of mousemove and mouseup
+    document.removeEventListener('mousemove', mouseMoveHandler);
+    document.removeEventListener('mouseup', mouseUpHandler);
+};
+
+searchModal.addEventListener('mousedown', mouseDownHandler);
+
+
+
+
+
