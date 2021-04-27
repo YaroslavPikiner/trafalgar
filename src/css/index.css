@@ -944,25 +944,21 @@ body {
 	background-color: red;
 }
 
-
 /* modal */
 
 .modal__search {
 	width: 400px;
 	height: 200px;
 	border: 1px solid black;
+	background-color: rgba(255, 255, 255, 0.411);
 	display: flex;
-  border-radius: 55px;
+	border-radius: 55px;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	padding: 20px;
 	position: absolute;
 	z-index: 1000;
-}
-
-.modal__search > input {
-	margin-bottom: 20px;
 }
 
 .modal__btns {
@@ -976,19 +972,20 @@ body {
 	height: 40px;
 	border-color: #458ff6;
 	outline: none;
-  margin-bottom: 20px;
-  transition: all .2s;
-  cursor: pointer;
+	margin-bottom: 20px;
+	transition: all 0.2s;
+	cursor: pointer;
 }
 
 .modal__btn:hover {
-  background-color: #458ff6;
+	background-color: #458ff6;
 }
 
 .modal__input {
 	border-radius: 55px;
-  width: 300px;
-  height: 30px;
-  border-color: #458ff6;
+	width: 300px;
+	height: 40px;
+	border-color: #458ff6;
 	outline: none;
+	margin-bottom: 20px;
 }
