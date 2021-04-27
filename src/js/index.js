@@ -1,13 +1,28 @@
-let searchButton = document.querySelector('.findBtn');
-let searchInput = document.querySelector('#modal__search');
-let nextElButton = document.querySelector('.nextBtn');
-let prevElButton = document.querySelector('.prevBtn');
-let childElButton = document.querySelector('.upBtn');
-let parentElButton = document.querySelector('.downBtn');
-let clearBtn = document.querySelector('.clearBtn');
+const modal =  `
+<section class="modal__search">
+<input type="text" class="modal__input" placeholder='Write element' id="modal__search" />
+<button class="modal__btn findBtn">find</button>
+<button class="modal__btn clearBtn">clear</button>
+<div class="modal__btns">
+	<button class="modal__btn prevBtn">prev</button>
+	<button class="modal__btn nextBtn">next</button>
+	<button class="modal__btn upBtn">up</button>
+	<button class="modal__btn downBtn">down</button>
+</div>
+</section>`;
+
+
+const main = document.querySelector('main');
+main.insertAdjacentHTML('beforebegin', modal);
+const searchButton = document.querySelector('.findBtn');
+const searchInput = document.querySelector('#modal__search');
+const nextElButton = document.querySelector('.nextBtn');
+const prevElButton = document.querySelector('.prevBtn');
+const childElButton = document.querySelector('.upBtn');
+const parentElButton = document.querySelector('.downBtn');
+const clearBtn = document.querySelector('.clearBtn');
 const searchModal = document.querySelector('.modal__search');
 let element;
-
 
 function selectElement() {
 	element.style.border = '1px solid red';
@@ -28,7 +43,7 @@ function findElement() {
 }
 
 searchButton.addEventListener('click', () => {
-    focus();    
+	focus();
 	findElement();
 });
 
@@ -66,6 +81,7 @@ parentElButton.addEventListener('click', () => {
 
 clearBtn.addEventListener('click', () => {
 	searchInput.value = '';
+	element.style.border = '';
 });
 
 function checkElements() {
@@ -76,8 +92,6 @@ function checkElements() {
 		? (nextElButton.disabled = false)
 		: (nextElButton.disabled = true);
 }
-
-
 
 searchModal.onmousedown = function (event) {
 	let shiftX = event.clientX - searchModal.getBoundingClientRect().left;
