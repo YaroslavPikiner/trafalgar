@@ -114,37 +114,29 @@ clearBtn.onclick = function () {
 };
 
 
-// // DRAG N DROP
-
 const mouseDownHandler = function(e) {
-    // Get the current mouse position
     x = e.clientX;
     y = e.clientY;
 
-    // Attach the listeners to document
     document.addEventListener('mousemove', mouseMoveHandler);
     document.addEventListener('mouseup', mouseUpHandler);
 };
 
 const mouseMoveHandler = function(e) {
-    // How far the mouse has been movesearchModal
     searchModal.style.zIndex = 100;
     searchModal.style.background = '#fff';
 
     const dx = e.clientX - x;
     const dy = e.clientY - y;
 
-    // Set the position of element
     searchModal.style.top = `${searchModal.offsetTop + dy}px`;
     searchModal.style.left = `${searchModal.offsetLeft + dx}px`;
 
-    // Reassign the position of mouse
     x = e.clientX;
     y = e.clientY;
 };
 
 const mouseUpHandler = function() {
-    // Remove the handlers of mousemove and mouseup
     searchModal.style.background = '';
     document.removeEventListener('mousemove', mouseMoveHandler);
     document.removeEventListener('mouseup', mouseUpHandler);
