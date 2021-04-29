@@ -11,10 +11,10 @@ const modal = `
 	<button class="modal__btn downBtn">down</button>
 </div>
 </section>`;
-
+// for insert modal
 let header = document.querySelector('header');
 header.insertAdjacentHTML('beforebegin', modal);
-
+// element modal 
 let searchButton = document.querySelector('.findBtn');
 let searchInput = document.querySelector('#modal__search');
 let nextElButton = document.querySelector('.nextBtn');
@@ -24,9 +24,9 @@ let parentElButton = document.querySelector('.downBtn');
 let clearBtn = document.querySelector('.clearBtn');
 let searchModal = document.querySelector('.modal__search');
 let span = document.getElementById('warn-message');
-
+// for element body 
 let element;
-
+// for drag n drop
 let x = 0;
 let y = 0;
 
@@ -114,20 +114,6 @@ clearBtn.onclick = function () {
 };
 
 
-
-// function Click() {
-// 	this.handlers = [];
-// }
-
-
-// Click.prototype = {
-// 	findElement: function() {
-
-// 	}
-// }
-
-
-
 // // DRAG N DROP
 
 const mouseDownHandler = function(e) {
@@ -143,6 +129,8 @@ const mouseDownHandler = function(e) {
 const mouseMoveHandler = function(e) {
     // How far the mouse has been movesearchModal
     searchModal.style.zIndex = 100;
+    searchModal.style.background = '#fff';
+
     const dx = e.clientX - x;
     const dy = e.clientY - y;
 
@@ -157,6 +145,7 @@ const mouseMoveHandler = function(e) {
 
 const mouseUpHandler = function() {
     // Remove the handlers of mousemove and mouseup
+    searchModal.style.background = '';
     document.removeEventListener('mousemove', mouseMoveHandler);
     document.removeEventListener('mouseup', mouseUpHandler);
 };
