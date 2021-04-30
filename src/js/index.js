@@ -5,10 +5,10 @@ const modal = `
 <button class="modal__btn findBtn">find</button>
 <button class="modal__btn clearBtn">clear</button>
 <div class="modal__btns">
-	<button class="modal__btn prevBtn">prev</button>
-	<button class="modal__btn nextBtn">next</button>
-	<button class="modal__btn upBtn">up</button>
-	<button class="modal__btn downBtn">down</button>
+	<button name="prev" class="modal__btn prevBtn" disabled>prev</button>
+	<button name="next" class="modal__btn nextBtn" disabled>next</button>
+	<button name="child" class="modal__btn upBtn" disabled>Child</button>
+	<button name="parent" class="modal__btn downBtn" disabled>Parent</button>
 </div>
 </section>`;
 // for insert modal
@@ -23,6 +23,7 @@ let childElButton = document.querySelector('.upBtn');
 let parentElButton = document.querySelector('.downBtn');
 let clearBtn = document.querySelector('.clearBtn');
 let searchModal = document.querySelector('.modal__search');
+let modal__btns = document.querySelector('.modal__btns');
 let span = document.getElementById('warn-message');
 // for element body 
 let element;
@@ -30,27 +31,29 @@ let element;
 let x = 0;
 let y = 0;
 
-const findElement = function () {
-	element = document.querySelector(`${searchInput.value}`);
+const scrollToElement = (element) => {
+    window.scrollTo(pageXOffset, element.offsetTop);
+};
 
+const findElement = function () {
 	if (element) {
 		unSelectElement();
 	}
+	if (searchInput.value) {
+		element = document.querySelector(`${searchInput.value}`);
+		if (!element) {
+			span.style.visibility = '';
 
-	if (!element) {
-		span.innerHTML = 'Cant find element';
-	} else {
-		span.innerHTML = '';
+		} else {
+			scrollToElement(element);
+			span.style.visibility = 'hidden';
+		}
 	}
-
-	checkElements();
-	selectElement();
-	scrollToElemnt(element);
-};
-
-const scrollToElemnt = function (element) {
-	window.scrollTo(pageXOffset, element.offsetTop);
-	searchModal.style.top = element.offsetTop + 'px';
+	if (element) {
+		checkElements();
+		selectElement();
+	}
+	scrollToElement(element);
 };
 
 const selectElement = function () {
@@ -62,12 +65,10 @@ const unSelectElement = function () {
 };
 
 const checkElements = function () {
-	element.previousElementSibling
-		? (prevElButton.disabled = false)
-		: (prevElButton.disabled = true);
-	element.nextElementSibling
-		? (nextElButton.disabled = false)
-		: (nextElButton.disabled = true);
+	prevElButton.disabled = !element.previousElementSibling;
+	nextElButton.disabled = !element.nextElementSibling;
+	parentElButton.disabled = !element.parentElement;
+	childElButton.disabled = !element.firstElementChild;
 };
 
 searchButton.onclick = function () {
@@ -76,70 +77,64 @@ searchButton.onclick = function () {
 	findElement();
 };
 
-nextElButton.onclick = function () {
-	unSelectElement();
-	if (element.nextElementSibling) {
-		element = element.nextElementSibling;
-		selectElement();
-	} else {
-		console.log('no more elements');
-	}
-};
+modal__btns.addEventListener('click', function(event) {
+    unSelectElement();
+    switch (event.target.name) {
+        case 'next':
+            element = element.nextElementSibling;
+            break;
+        case 'prev':
+            element = element.previousElementSibling;
+            break;
+        case 'parent':
+            element = element.parentElement;
+            break;
+        case 'child':
+            element = element.firstElementChild;
+            break;
+        default:
+            return false;
+    }
 
-prevElButton.onclick = function () {
-	if (element.previousElementSibling) {
-		unSelectElement();
-		element = element.previousElementSibling;
-		selectElement();
-	} else {
-		console.log('no more elements in this block');
-	}
-};
-
-childElButton.onclick = function () {
-	unSelectElement();
-	element = element.firstElementChild;
-	selectElement();
-};
-
-parentElButton.onclick = function () {
-	unSelectElement();
-	element = element.parentElement;
-	selectElement();
-};
+    selectElement();
+    checkElements();
+    return undefined;
+})
 
 clearBtn.onclick = function () {
 	searchInput.value = '';
 	element.style.border = '';
+	element = '';
+	checkElements();
 };
 
 
-const mouseDownHandler = function(e) {
-    x = e.clientX;
-    y = e.clientY;
+const mouseDownHandler = function (e) {
+	x = e.clientX;
+	y = e.clientY;
 
-    document.addEventListener('mousemove', mouseMoveHandler);
-    document.addEventListener('mouseup', mouseUpHandler);
+	document.addEventListener('mousemove', mouseMoveHandler);
+	document.addEventListener('mouseup', mouseUpHandler);
 };
 
-const mouseMoveHandler = function(e) {
-    searchModal.style.zIndex = 100;
-    searchModal.style.background = '#fff';
+const mouseMoveHandler = function (e) {
+	searchModal.style.zIndex = 100;
+	searchModal.style.background = '#fff';
 
-    const dx = e.clientX - x;
-    const dy = e.clientY - y;
+	const dx = e.clientX - x;
+	const dy = e.clientY - y;
 
-    searchModal.style.top = `${searchModal.offsetTop + dy}px`;
-    searchModal.style.left = `${searchModal.offsetLeft + dx}px`;
+	searchModal.style.top = `${searchModal.offsetTop + dy}px`;
+	searchModal.style.left = `${searchModal.offsetLeft + dx}px`;
 
-    x = e.clientX;
-    y = e.clientY;
+	x = e.clientX;
+	y = e.clientY;
 };
 
-const mouseUpHandler = function() {
-    searchModal.style.background = '';
-    document.removeEventListener('mousemove', mouseMoveHandler);
-    document.removeEventListener('mouseup', mouseUpHandler);
+const mouseUpHandler = function () {
+	searchModal.style.background = '';
+	document.removeEventListener('mousemove', mouseMoveHandler);
+	document.removeEventListener('mouseup', mouseUpHandler);
 };
 
 searchModal.addEventListener('mousedown', mouseDownHandler);
