@@ -12,8 +12,8 @@ const modal = `
 </div>
 </section>`;
 // for insert modal
-let header = document.querySelector('header');
-header.insertAdjacentHTML('beforebegin', modal);
+let main = document.querySelector('main');
+main.insertAdjacentHTML('afterend', modal);
 // element modal 
 let searchButton = document.querySelector('.findBtn');
 let searchInput = document.querySelector('#modal__search');
@@ -31,8 +31,9 @@ let element;
 let x = 0;
 let y = 0;
 
+
 const scrollToElement = (element) => {
-    window.scrollTo(pageXOffset, element.offsetTop);
+	window.scrollTo(pageXOffset, element.offsetTop);
 };
 
 const findElement = function () {
@@ -43,7 +44,7 @@ const findElement = function () {
 		element = document.querySelector(`${searchInput.value}`);
 		if (!element) {
 			span.style.visibility = '';
-
+			span.textContent = 'Canno find element'
 		} else {
 			scrollToElement(element);
 			span.style.visibility = 'hidden';
@@ -77,28 +78,28 @@ searchButton.onclick = function () {
 	findElement();
 };
 
-modal__btns.addEventListener('click', function(event) {
-    unSelectElement();
-    switch (event.target.name) {
-        case 'next':
-            element = element.nextElementSibling;
-            break;
-        case 'prev':
-            element = element.previousElementSibling;
-            break;
-        case 'parent':
-            element = element.parentElement;
-            break;
-        case 'child':
-            element = element.firstElementChild;
-            break;
-        default:
-            return false;
-    }
+modal__btns.addEventListener('click', function (event) {
+	unSelectElement();
+	switch (event.target.name) {
+		case 'next':
+			element = element.nextElementSibling;
+			break;
+		case 'prev':
+			element = element.previousElementSibling;
+			break;
+		case 'parent':
+			element = element.parentElement;
+			break;
+		case 'child':
+			element = element.firstElementChild;
+			break;
+		default:
+			return false;
+	}
 
-    selectElement();
-    checkElements();
-    return undefined;
+	selectElement();
+	checkElements();
+	return undefined;
 })
 
 clearBtn.onclick = function () {
