@@ -1,32 +1,40 @@
 const getImgUrl1 = 'https://boiling-refuge-66454.herokuapp.com/images';
 const getImgUrl2 = 'https://boiling-refuge-66454.herkuapp.com/images';
 
-
-
-
-
-const getData = async (url) => {
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-    return data;
+function request(url) {
+    return fetch(url)
 }
 
-let promises = [];
-for (let i = 1; i <= 5; i++) {
-  promises.push(fetch(getImgUrl1));
-}
-Promise.all(promises)
-  .then(function handleData(data) {
-    return fetch("example.api") // should be returned 1 time
-      .then(response => {
-        if (response.ok) return response.json();
-        throw new Error(response.statusText);
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+  function doRequest(urls){
+    var url = urls.shift();
+  
+    if( ! url){
+      return Promise.resolve();
+    }
+  
+    return request(url)
+      .then(() => {
+        return sleep(5000);
+      })
+      .then(() => {
+        return doRequest(urls);
       });
+  }
+  
+  doRequest([
+   'https://boiling-refuge-66454.herkuapp.com/images',
+   'https://boiling-refuge-66454.herkuapp.com/images',
+   'https://boiling-refuge-66454.herkuapp.com/images',
+   'https://boiling-refuge-66454.herkuapp.com/images',
+   'https://boiling-refuge-66454.herokuapp.com/images',
+  ])
+  .then(() => {
+    console.log(doRequest())
   })
-  .catch(function handleError(error) {
-    console.log("Error" + error);
-  });
 
-
-  console.log(handleData())
+  // console.log( request(getImgUrl1) ?? request(getImgUrl1) ?? request(getImgUrl1) ?? request(getImgUrl2))
